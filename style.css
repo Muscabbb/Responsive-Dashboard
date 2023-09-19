@@ -1,0 +1,461 @@
+/* Start Global Rules */
+
+/* Start Global Variables */
+:root{
+    --btn-green-color:#10D876;
+    --main-color:#0d40c6;
+    --hover-color:#1652F0;
+    --second:#2d60f77a;
+    --Text-color:#ccc;
+    --main-transition:.5s;
+}
+/* End Global Variables */
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: var(--bg-color);
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+@media (max-width:991px){
+    body{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:767px){
+    body{
+        font-size: 12px;
+    }
+}
+
+.container{
+    background: white;
+    padding: 0 15px;
+    margin: 19px auto;
+    position: relative;
+}
+
+
+/* small devics media */
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+
+/* mediam devics media */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+
+/* large devics media */
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+/* Xlarge devics media */
+@media (min-width: 1400px){
+    .container{
+        width: 1370px;
+    }
+}
+
+/*! Start main-container */
+.main-container{
+    display: flex;
+}
+/** Start left-side-links */
+.left-side-links{
+    display: flex;
+    flex-direction: column;
+    padding:15px;
+    background: var(--main-color);
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.left-side-links li i{
+    margin-top: 25px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.left-side-links li i:hover{
+    background: var(--second);
+}
+.left-side-links li:first-of-type{
+    margin-top: 50px;
+}
+.active{
+    background: var(--second);
+}
+/* *End left-side-links */
+
+/** Start The content-holder */
+.content-holder{
+    width: 100%;
+    margin-left: 68px;
+}
+/*? Start The content-header */
+.content-header .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--Text-color);
+}
+@media (max-width:767px){
+    .content-header .title{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+.content-header .title .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--main-color);
+    letter-spacing: 1.4px;
+}
+.content-header .title .logo i{
+    font-size: .6em;
+    padding: 5px;
+    background: var(--main-color);
+    color: white;
+    border-radius: 5px;
+}
+.content-header .title .account-details{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+}
+@media (max-width:767px){
+    .content-header .title .account-details{
+        flex-basis: 100%;   
+    }
+}
+.content-header .title .account-details a{
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: .7em;
+    margin-right: 20px;
+    display: block;
+    border: 1px solid var(--Text-color);
+    color: var(--main-color);
+    transition: var(--main-transition);
+    position: relative;
+}
+.content-header .title .account-details a::before{
+    content:"";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: var(--second);
+    border-radius: 15px 0 0 15px;
+    top: 0;
+    left: 0;
+    transition: var(--main-transition);
+}
+.content-header .title .account-details a:hover::before{
+    width: 100%;
+    border-radius: 15px;
+}
+.content-header .title .account-details a span{
+    position: relative;
+    z-index: 2;
+}
+.content-header .title .account-details a span:last-of-type{
+    margin-left: 5px;
+
+}
+.content-header .title .account-details a span i{
+    margin-left: 5px;
+    padding-right: 20px;
+}
+.content-header .title .account-details .account{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.content-header .title .account-details .account i:first-of-type{
+    padding: 10px;
+    background: var(--main-color);
+    border-radius: 50%;
+    color: white;
+    font-size: .8em;
+    margin-right: 10px;
+}
+.content-header .title .account-details .account span{
+    font-size: .9em;
+    color: var(--main-color);
+    margin-right: 5px;
+}
+.content-header .title .account-details .account i:last-child{
+    color: var(--main-color);
+    font-size: .7em;
+}
+/*? End The content-header */
+
+/*? Start User Name */
+.user-name{
+    padding: 20px 0 20px 20px;
+}
+.user-name p{
+    font-weight: bold;
+    color: var(--main-color);
+    letter-spacing: 1.3px;
+}
+.user-name p span{
+    font-weight: 300;
+    color: var(--hover-color);
+    letter-spacing: 1px;
+}
+/*? End User Name */
+
+/** Start Container  */
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width:820px){
+    .container{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/*? Start Exchanges */
+.container .exchanges{
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+}
+.container .exchanges .buy_sell{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+@media (max-width:767px){
+    .container .exchanges .buy_sell{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+.container .exchanges .buy_sell a{
+    padding: 10px 75px;
+    color: white;
+    text-decoration: none;
+    font-size: .7em;
+    background: var(--main-color);
+    border-radius: 5px;
+    letter-spacing: 1.3px;
+    display: block;
+    position: relative;
+    transition: var(--main-transition);
+}
+.container .exchanges .buy_sell a:first-of-type:hover{
+    color: var(--main-color);
+    border: 1px solid var(--Text-color);
+}
+.container .exchanges .buy_sell a::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    transition: var(--main-transition);
+}
+.container .exchanges .buy_sell a:first-of-type:hover::before{
+    width: 100%;
+    background: white;
+    content: attr(data-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .exchanges .buy_sell a:last-of-type{
+    border: 1px solid var(--Text-color);
+    background: transparent;
+    color: var(--main-color);
+}
+.container .exchanges .buy_sell a:last-of-type:hover{
+    color: white;
+}
+.container .exchanges .buy_sell a:last-of-type:hover::before{
+    width: 100%;
+    background: var(--main-color);
+    content: attr(data-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .exchanges .money-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container .exchanges .money-info > div{
+    padding: 10px 0;
+}
+.container .exchanges .money-info > div span{
+    margin-bottom: 10px;
+    display: block;
+    text-transform: capitalize;
+}
+.container .exchanges .money-info > div .info{
+    display: flex;
+    align-items: center;
+    gap: 160px;
+    padding: 10px 10px;
+    background: var(--second);
+    border-radius: 5px;
+    color: var(--main-color);
+    font-size: .8em;
+}
+.container .exchanges .money-info > div .info p i{
+    margin-right: 10px;
+}
+.container .exchanges .monthly-limit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .7em;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: var(--main-color);
+}
+.container .exchanges .monthly-limit span{
+    color:#333;
+}
+.container .exchanges .exchange-btn{
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    background: var(--btn-green-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 35px;
+}
+.container .exchanges .note{
+    font-size: .6em;
+    color: var(--hover-color);
+    line-height: 1.4;
+}
+/*? End Exchanges */
+
+/*? Start users Deals */
+.container .users-deals{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .users-deals .users-accounts{
+    display: flex;
+    justify-content: space-between;
+}
+.container .users-deals .users-accounts .user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.container .users-deals .users-accounts .user .img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+@media (min-width:1200px){
+    .container .users-deals .users-accounts .user .img{
+        width: 50px;
+        height: 50px;
+    }
+}
+.container .users-deals .users-accounts .user:nth-of-type(2) .img{
+    order: 1;
+}
+.container .users-deals .users-accounts .user .img img{
+    max-width: 100%;
+}
+.container .users-deals .users-accounts .user .user-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.container .users-deals .users-accounts .user .user-info h3{
+    font-size: .6em;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    text-transform: capitalize;
+}
+@media (min-width:1200px){
+    .container .users-deals .users-accounts .user .user-info h3{
+        font-size: .8em;
+    }
+}
+.container .users-deals .users-accounts .user:nth-of-type(2) .user-info h3{
+    align-self: flex-end;
+}
+.container .users-deals .users-accounts .user .user-info a{
+    font-size: .4em;
+    text-decoration: none;
+    color: var(--main-color);
+}
+@media (min-width:1200px){
+    .container .users-deals .users-accounts .user .user-info a{
+        font-size: .7em;
+        text-decoration: none;
+        color: var(--main-color);
+    }
+}
+
+.deals{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+.deals .info{
+    display: flex;
+    align-items: center;
+    gap: 160px;
+    padding: 10px 10px;
+    background: var(--second);
+    border-radius: 5px;
+    color: var(--main-color);
+    font-size: .8em;
+    margin-top: 15px;
+}
+/*? End users Deals */
+
+/** End Container  */
+
+/** End The content-holder */
+
+/*! End main-container */
